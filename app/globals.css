@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* LogicNex Brand Colors */
+  --dark-navy: #0F172A;
+  --soft-white: #E5E7EB;
+  --royal-blue: #2563EB;
+  --royal-blue-shadow: rgba(37, 99, 235, 0.25);
+  
+  --background: #0F172A;
+  --foreground: #E5E7EB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--dark-navy);
+  --color-secondary: var(--royal-blue);
+  --color-accent: var(--soft-white);
+  --color-highlight: var(--royal-blue);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0F172A;
+    --foreground: #E5E7EB;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563EB;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1D4ED8;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #0F172A;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #2563EB;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1D4ED8;
+  }
+}

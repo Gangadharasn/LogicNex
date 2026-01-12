@@ -1,0 +1,31 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Logo Text: LogicNex -->
+  <text x="10" y="45" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#F5F7FA" filter="url(#shadow)">
+    LogicN
+    <tspan fill="#F5F7FA">e</tspan>
+  </text>
+  
+  <!-- Stylized X (Network Symbol) -->
+  <g transform="translate(120, 15)">
+    <!-- Top-right node -->
+    <circle cx="25" cy="5" r="4" fill="#F5F7FA" filter="url(#shadow)"/>
+    <!-- Bottom-right node -->
+    <circle cx="25" cy="25" r="4" fill="#F5F7FA" filter="url(#shadow)"/>
+    <!-- Center node -->
+    <circle cx="15" cy="15" r="4" fill="#F5F7FA" filter="url(#shadow)"/>
+    <!-- Connecting lines forming X -->
+    <line x1="15" y1="15" x2="25" y2="5" stroke="#F5F7FA" stroke-width="2" filter="url(#shadow)"/>
+    <line x1="15" y1="15" x2="25" y2="25" stroke="#F5F7FA" stroke-width="2" filter="url(#shadow)"/>
+  </g>
+  
+  <!-- SOFTWARE text -->
+  <text x="10" y="65" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#F5F7FA" filter="url(#shadow)" letter-spacing="2">
+    SOFTWARE
+  </text>
+</svg>
