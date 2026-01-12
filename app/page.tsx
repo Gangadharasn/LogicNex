@@ -108,7 +108,9 @@ export default function Home() {
                   ease: "easeInOut",
                 }}
               >
-                <WireframeCubeWrapper />
+                <div className="w-full h-full absolute inset-0" style={{ width: '100%', height: '100%' }}>
+                  <WireframeCubeWrapper />
+                </div>
               </motion.div>
               
               {/* Floating particles effect */}

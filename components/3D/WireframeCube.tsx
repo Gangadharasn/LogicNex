@@ -2,7 +2,6 @@
 
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 
 function WireframeCubeModel() {
@@ -108,15 +107,16 @@ function WireframeCubeModel() {
 
 export default function WireframeCube() {
   return (
-    <div className="w-full h-full min-h-[400px]" style={{ width: '100%', height: '100%', minHeight: '400px' }}>
+    <div className="w-full h-full" style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
       <Canvas 
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }} 
         style={{ width: '100%', height: '100%', display: 'block' }}
         camera={{ position: [0, 0, 6], fov: 50 }}
+        dpr={[1, 2]}
       >
-        <PerspectiveCamera makeDefault position={[0, 0, 6]} fov={50} />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1.2} color="#E5E7EB" />
+        <ambientLight intensity={0.6} />
+        <directionalLight position={[5, 5, 5]} intensity={1.5} color="#E5E7EB" />
+        <pointLight position={[0, 3, 3]} intensity={0.8} color="#2563EB" />
         <WireframeCubeModel />
       </Canvas>
     </div>

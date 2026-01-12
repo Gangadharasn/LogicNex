@@ -8,19 +8,25 @@ export default function WireframeCubeWrapper() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Add a small delay to ensure window is ready
-      const timer = setTimeout(() => {
+      // Load immediately without delay
+      Promise.resolve().then(() => {
         import('./WireframeCube')
           .then((module) => {
             setClientWireframe(() => module.default);
           })
           .catch((err) => {
-            console.error('Failed to load WireframeCube:', err);
-            setError(err.message);
+            console.error('Failed to load WireframeCube, trying SimpleWireframe:', err);
+            // Fallback to simpler version
+            return import('./SimpleWireframe')
+              .then((module) => {
+                setClientWireframe(() => module.default);
+              });
+          })
+          .catch((err) => {
+            console.error('Failed to load all 3D components:', err);
+            setError(err.message || 'Failed to load 3D scene. Please check browser console.');
           });
-      }, 100);
-
-      return () => clearTimeout(timer);
+      });
     }
   }, []);
 

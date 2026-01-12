@@ -2,7 +2,6 @@
 
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 
 function LaptopWireframeModel() {
@@ -146,8 +145,8 @@ export default function LaptopWireframe() {
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }} 
         style={{ width: '100%', height: '100%', display: 'block' }}
         camera={{ position: [0, 0, 7], fov: 50 }}
+        dpr={[1, 2]}
       >
-        <PerspectiveCamera makeDefault position={[0, 0, 7]} fov={50} />
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1.2} color="#E5E7EB" />
         <LaptopWireframeModel />
