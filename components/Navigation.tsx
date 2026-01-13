@@ -72,7 +72,7 @@ export default function Navigation() {
               <img 
                 src="/logo.png" 
                 alt="LogicNex Software" 
-                className="h-16 md:h-20 w-auto relative z-10"
+                className="h-20 md:h-24 w-auto relative z-10 drop-shadow-[0_0_25px_rgba(37,99,235,0.4)]"
               />
             </motion.div>
           </Link>

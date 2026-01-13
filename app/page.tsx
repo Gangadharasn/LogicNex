@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WireframeCubeWrapper from '@/components/3D/WireframeCubeWrapper';
 import Link from 'next/link';
 
 export default function Home() {
@@ -108,33 +107,57 @@ export default function Home() {
                   ease: "easeInOut",
                 }}
               >
-                <div className="w-full h-full absolute inset-0" style={{ width: '100%', height: '100%' }}>
-                  <WireframeCubeWrapper />
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center">
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.5, 1, 0.5],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      className="w-32 h-32 border-4 border-[#2563EB] rounded-lg mx-auto mb-4"
+                      style={{
+                        boxShadow: '0 0 40px rgba(37, 99, 235, 0.5)',
+                      }}
+                    />
+                    <p className="text-[#2563EB] text-lg font-semibold">Technology Solutions</p>
+                  </div>
                 </div>
               </motion.div>
               
-              {/* Floating particles effect */}
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-[#2563EB] rounded-full"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
-                  animate={{
-                    y: [0, -20, 0],
-                    opacity: [0.3, 0.8, 0.3],
-                    scale: [1, 1.5, 1],
-                  }}
-                  transition={{
-                    duration: 2 + Math.random() * 2,
-                    repeat: Infinity,
-                    delay: Math.random() * 2,
-                    ease: "easeInOut",
-                  }}
-                />
-              ))}
+            {/* Floating particles effect (deterministic for hydration) */}
+            {[
+              { left: 12, top: 18, duration: 2.2, delay: 0.3 },
+              { left: 78, top: 26, duration: 2.6, delay: 0.8 },
+              { left: 34, top: 62, duration: 3.0, delay: 0.1 },
+              { left: 88, top: 74, duration: 2.4, delay: 0.6 },
+              { left: 52, top: 12, duration: 2.8, delay: 0.2 },
+              { left: 67, top: 49, duration: 3.2, delay: 0.5 },
+            ].map((p, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 bg-[#2563EB] rounded-full"
+                style={{
+                  left: `${p.left}%`,
+                  top: `${p.top}%`,
+                }}
+                animate={{
+                  y: [0, -20, 0],
+                  opacity: [0.3, 0.8, 0.3],
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration: p.duration,
+                  repeat: Infinity,
+                  delay: p.delay,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
             </motion.div>
           </div>
         </div>

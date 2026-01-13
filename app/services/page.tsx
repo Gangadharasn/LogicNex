@@ -3,9 +3,6 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WireframeCubeWrapper from '@/components/3D/WireframeCubeWrapper';
-import WebWireframeWrapper from '@/components/3D/WebWireframeWrapper';
-import LaptopWireframeWrapper from '@/components/3D/LaptopWireframeWrapper';
 
 const services = [
   {
@@ -53,14 +50,31 @@ const services = [
 ];
 
 const get3DModel = (modelType: string) => {
-  switch (modelType) {
-    case 'web':
-      return <WebWireframeWrapper />;
-    case 'laptop':
-      return <LaptopWireframeWrapper />;
-    default:
-      return <WireframeCubeWrapper />;
-  }
+  // Simple placeholder icon based on service type
+  const icons: Record<string, string> = {
+    web: '🌐',
+    laptop: '💻',
+    default: '⚙️',
+  };
+  
+  return (
+    <div className="w-full h-full flex items-center justify-center">
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          rotate: [0, 5, -5, 0],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="text-6xl"
+      >
+        {icons[modelType] || icons.default}
+      </motion.div>
+    </div>
+  );
 };
 
 export default function Services() {
@@ -116,30 +130,56 @@ export default function Services() {
                 ease: "easeInOut",
               }}
             >
-              <div className="w-full h-full absolute inset-0" style={{ width: '100%', height: '100%' }}>
-                <WireframeCubeWrapper />
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.5, 1, 0.5],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="w-32 h-32 border-4 border-[#2563EB] rounded-lg mx-auto mb-4"
+                    style={{
+                      boxShadow: '0 0 40px rgba(37, 99, 235, 0.5)',
+                    }}
+                  />
+                  <p className="text-[#2563EB] text-lg font-semibold">Our Services</p>
+                </div>
               </div>
             </motion.div>
             
-            {/* Floating particles */}
-            {[...Array(8)].map((_, i) => (
+            {/* Floating particles (deterministic for hydration) */}
+            {[
+              { left: 15, top: 22, duration: 2.6, delay: 0.4, x: 6 },
+              { left: 82, top: 28, duration: 2.9, delay: 0.9, x: -5 },
+              { left: 33, top: 64, duration: 3.1, delay: 0.2, x: 8 },
+              { left: 74, top: 58, duration: 2.7, delay: 0.6, x: -7 },
+              { left: 46, top: 18, duration: 2.8, delay: 0.1, x: 5 },
+              { left: 62, top: 72, duration: 3.0, delay: 0.5, x: -6 },
+              { left: 9, top: 45, duration: 2.5, delay: 0.7, x: 4 },
+              { left: 88, top: 40, duration: 3.2, delay: 0.3, x: -8 },
+            ].map((p, i) => (
               <motion.div
                 key={i}
                 className="absolute w-2 h-2 bg-[#2563EB] rounded-full"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
+                  left: `${p.left}%`,
+                  top: `${p.top}%`,
                 }}
                 animate={{
                   y: [0, -30, 0],
                   opacity: [0.2, 0.9, 0.2],
                   scale: [1, 1.8, 1],
-                  x: [0, Math.random() * 20 - 10, 0],
+                  x: [0, p.x, 0],
                 }}
                 transition={{
-                  duration: 2.5 + Math.random() * 1.5,
+                  duration: p.duration,
                   repeat: Infinity,
-                  delay: Math.random() * 2,
+                  delay: p.delay,
                   ease: "easeInOut",
                 }}
               />
