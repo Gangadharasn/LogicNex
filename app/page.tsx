@@ -88,17 +88,17 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-row gap-3 sm:gap-4"
               >
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-[#2563EB] text-[#FFFFFF] rounded-lg font-semibold hover:bg-[#1E40AF] transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="flex-1 px-4 sm:px-8 py-3 sm:py-4 bg-[#2563EB] text-[#FFFFFF] rounded-lg font-semibold hover:bg-[#1E40AF] transition-all shadow-lg hover:shadow-xl transform hover:scale-105 text-center text-sm sm:text-base"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="px-8 py-4 bg-transparent text-[#0F172A] rounded-lg font-semibold hover:bg-[#F8FAFC] transition-all border-2 border-[#2563EB]"
+                  className="flex-1 px-4 sm:px-8 py-3 sm:py-4 bg-transparent text-[#0F172A] rounded-lg font-semibold hover:bg-[#F8FAFC] transition-all border-2 border-[#2563EB] text-center text-sm sm:text-base"
                 >
                   View Portfolio
                 </Link>
