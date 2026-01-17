@@ -30,12 +30,11 @@ export default function Navigation() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0F172A]/95 backdrop-blur-md shadow-2xl'
-          : 'bg-transparent'
+          ? 'bg-[#0B3C5D] backdrop-blur-md shadow-lg'
+          : 'bg-[#0B3C5D]'
       }`}
       style={{
-        boxShadow: isScrolled ? '0 10px 40px rgba(37, 99, 235, 0.3), 0 0 20px rgba(37, 99, 235, 0.15)' : 'none',
-        transform: isScrolled ? 'translateZ(20px)' : 'translateZ(0px)',
+        boxShadow: isScrolled ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +82,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-[#E5E7EB] hover:text-[#2563EB] transition-colors font-medium"
+                className="relative text-[#FFFFFF] hover:text-[#2563EB] transition-colors font-medium"
               >
                 <motion.span
                   initial={{ opacity: 0, y: -20 }}
@@ -125,7 +124,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-[#E5E7EB] hover:bg-[#0F172A]/50"
+            className="md:hidden p-2 rounded-lg text-[#FFFFFF] hover:bg-[#0B3C5D]/80"
             aria-label="Toggle menu"
           >
             <svg
@@ -154,7 +153,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0F172A] border-t border-[#2563EB]/20"
+            className="md:hidden bg-[#0B3C5D] border-t border-[#2563EB]/20"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
@@ -162,7 +161,7 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-[#E5E7EB] hover:text-[#2563EB] transition-colors font-medium"
+                  className="block py-2 text-[#FFFFFF] hover:text-[#2563EB] transition-colors font-medium"
                 >
                   {link.label}
                 </Link>

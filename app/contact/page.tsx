@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F172A]">
+    <div className="min-h-screen bg-[#FFFFFF]">
       <Navigation />
 
       {/* Hero Section */}
@@ -53,11 +53,11 @@ export default function Contact() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-[#E5E7EB]">
+              <span className="text-[#0F172A]">
                 Get In Touch
               </span>
             </h1>
-            <p className="text-xl text-[#E5E7EB]/80 max-w-3xl mx-auto">
+            <p className="text-xl text-[#334155] max-w-3xl mx-auto">
               Have a project in mind? We'd love to hear from you. 
               Send us a message and we'll respond as soon as possible.
             </p>
@@ -83,8 +83,8 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-1"
             >
-              <div className="bg-[#0F172A] rounded-2xl p-8 shadow-lg border border-[#2563EB]/20" style={{ boxShadow: '0 10px 30px rgba(37, 99, 235, 0.25)' }}>
-                <h3 className="text-2xl font-bold text-[#E5E7EB] mb-6">
+              <div className="bg-[#FFFFFF] border border-gray-200 rounded-2xl p-8 shadow-lg" style={{ boxShadow: '0 10px 30px rgba(37, 99, 235, 0.25)' }}>
+                <h3 className="text-2xl font-bold text-[#0F172A] mb-6">
                   Contact Information
                 </h3>
                 
@@ -92,9 +92,9 @@ export default function Contact() {
                   <div>
                     <div className="flex items-center mb-2">
                       <div className="text-2xl mr-3">📧</div>
-                      <h4 className="font-semibold text-[#E5E7EB]">Email</h4>
+                      <h4 className="font-semibold text-[#0F172A]">Email</h4>
                     </div>
-                    <p className="text-[#E5E7EB]/80 ml-11">
+                    <p className="text-[#334155] ml-11">
                       contact@logicnex.com
                     </p>
                   </div>
@@ -102,9 +102,9 @@ export default function Contact() {
                   <div>
                     <div className="flex items-center mb-2">
                       <div className="text-2xl mr-3">🌐</div>
-                      <h4 className="font-semibold text-[#E5E7EB]">Website</h4>
+                      <h4 className="font-semibold text-[#0F172A]">Website</h4>
                     </div>
-                    <p className="text-[#E5E7EB]/80 ml-11">
+                    <p className="text-[#334155] ml-11">
                       www.logicnex.com
                     </p>
                   </div>
@@ -112,9 +112,9 @@ export default function Contact() {
                   <div>
                     <div className="flex items-center mb-2">
                       <div className="text-2xl mr-3">💼</div>
-                      <h4 className="font-semibold text-[#E5E7EB]">Services</h4>
+                      <h4 className="font-semibold text-[#0F172A]">Services</h4>
                     </div>
-                    <p className="text-[#E5E7EB]/80 ml-11">
+                    <p className="text-[#334155] ml-11">
                       Custom software solutions
                     </p>
                   </div>
@@ -130,12 +130,12 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-2"
             >
-              <div className="bg-[#0F172A] rounded-2xl p-8 shadow-lg border border-[#2563EB]/20" style={{ boxShadow: '0 10px 30px rgba(37, 99, 235, 0.25)' }}>
+              <div className="bg-[#FFFFFF] border border-gray-200 rounded-2xl p-8 shadow-lg" style={{ boxShadow: '0 10px 30px rgba(37, 99, 235, 0.25)' }}>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-[#E5E7EB] mb-2"
+                      className="block text-sm font-semibold text-[#0F172A] mb-2"
                     >
                       Full Name *
                     </label>
@@ -146,7 +146,7 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#2563EB]/20 bg-[#0F172A] text-[#E5E7EB] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-[#FFFFFF] text-[#0F172A] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
                       placeholder="John Doe"
                     />
                   </div>
@@ -154,7 +154,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-[#E5E7EB] mb-2"
+                      className="block text-sm font-semibold text-[#0F172A] mb-2"
                     >
                       Email Address *
                     </label>
@@ -165,7 +165,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#2563EB]/20 bg-[#0F172A] text-[#E5E7EB] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-[#FFFFFF] text-[#0F172A] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -173,7 +173,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-semibold text-[#E5E7EB] mb-2"
+                      className="block text-sm font-semibold text-[#0F172A] mb-2"
                     >
                       Company Name
                     </label>
@@ -183,7 +183,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#2563EB]/20 bg-[#0F172A] text-[#E5E7EB] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-[#FFFFFF] text-[#0F172A] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
                       placeholder="Acme Inc."
                     />
                   </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-semibold text-[#E5E7EB] mb-2"
+                      className="block text-sm font-semibold text-[#0F172A] mb-2"
                     >
                       Message *
                     </label>
@@ -202,7 +202,7 @@ export default function Contact() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-[#FFFFFF] text-[#0F172A] focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your project..."
                     />
                   </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-400 rounded-lg"
+                      className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
                     >
                       Thank you for your message! We'll get back to you soon.
                     </motion.div>
@@ -221,7 +221,7 @@ export default function Contact() {
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-400 rounded-lg"
+                      className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg"
                     >
                       Something went wrong. Please try again later.
                     </motion.div>
@@ -230,7 +230,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 bg-[#2563EB] text-white rounded-lg font-semibold hover:bg-[#1D4ED8] transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full px-8 py-4 bg-[#2563EB] text-[#FFFFFF] rounded-lg font-semibold hover:bg-[#1E40AF] transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
