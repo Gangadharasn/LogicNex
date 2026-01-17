@@ -306,7 +306,7 @@ export default function Services() {
                     <ul className="space-y-1">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-[#334155]">
-                          <span className="text-[#2563EB] mr-2">✓</span>
+                          <span className="text-[#2563EB] mr-2 text-lg">✓</span>
                           {benefit}
                         </li>
                       ))}

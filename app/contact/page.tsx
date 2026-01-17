@@ -44,15 +44,15 @@ export default function Contact() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-32 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 sm:mb-6">
               <span className="text-[#0F172A]">
                 Get In Touch
               </span>
@@ -72,9 +72,9 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-0 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

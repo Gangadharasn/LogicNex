@@ -364,19 +364,19 @@ export default function Home() {
               </p>
               <ul className="space-y-2 text-[#334155]">
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>Stakeholder interviews and requirement workshops</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>Detailed requirement documentation and specifications</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>Feasibility analysis and technical assessments</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>Change management and requirement tracking</span>
                 </li>
               </ul>
@@ -396,19 +396,19 @@ export default function Home() {
               </p>
               <ul className="space-y-2 text-[#334155]">
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>End-to-end encryption and secure data transmission</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>Multi-factor authentication and role-based access control</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>Regular security audits and vulnerability assessments</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#2563EB] mr-2">✓</span>
+                  <span className="text-[#2563EB] mr-2">•</span>
                   <span>GDPR and compliance-ready solutions</span>
                 </li>
               </ul>
@@ -443,7 +443,7 @@ export default function Home() {
                 description: 'We take time to understand your business vision, goals, and long-term objectives. Our solutions are designed to align with your strategic direction and help you achieve your mission.',
               },
               {
-                icon: '🚀',
+                icon: '💡',
                 title: 'Scalable Growth',
                 description: 'Your software is built to grow with your business. We design scalable architectures that can handle increased load, users, and data as your company expands.',
               },
@@ -514,12 +514,12 @@ export default function Home() {
               {
                 title: 'Quality Assurance',
                 description: 'Rigorous testing and quality control to ensure flawless delivery',
-                icon: '✅',
+                icon: '⭐',
               },
               {
                 title: 'Innovation First',
                 description: 'Leveraging the latest technologies and best practices for optimal results',
-                icon: '🚀',
+                icon: '💡',
               },
             ].map((feature, index) => (
               <motion.div
